@@ -13,7 +13,7 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, zen-broswer ... }:
 
     (let
       system = "x86_64-linux";
