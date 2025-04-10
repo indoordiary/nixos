@@ -18,6 +18,8 @@
   outputs = inputs@{ self, nixpkgs, home-manager, zen-browser, ... }:
     let
       system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+      
       genRev = {
         system.configurationRevision = self.rev or null;
         system.nixos.label = with builtins;
@@ -28,7 +30,10 @@
     in {
       nixosConfigurations.ChenHsi-Desktop = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs; };
+        specialArgs = { 
+          inherit inputs;
+          lib = nixpkgs.lib;
+        };
         
         modules = [
           ./configuration/system.nix
@@ -43,13 +48,21 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.chenhsi = { pkgs, inputs, lib, ... }: 
-                import ./configuration/home.nix { inherit inputs pkgs lib; };
+                import ./configuration/home.nix { 
+                  inherit inputs pkgs lib;  # 关键：传递所有参数
+                };
               backupFileExtension = "backup";
             };
           }
           
           genRev
         ];
+      };
+      
+      homeConfigurations.chenhsi = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [ ./configuration/home.nix ];
       };
     };
 }
