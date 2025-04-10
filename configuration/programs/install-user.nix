@@ -20,7 +20,8 @@
     
     wpsoffice-cn
     vscode-fhs
-    
+    typora
+
     inputs.zen-browser.packages.${system}.beta
   ];
 }
