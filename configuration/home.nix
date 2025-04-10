@@ -1,5 +1,3 @@
-{ pkgs, inputs, lib, config, ... }:
-
 {
   imports = [
     ./programs/install-user.nix
@@ -34,11 +32,10 @@
     ];
   };
   
-  
-  home.activation.installPackages = lib.mkForce{
-    data ="";
-    before=[];
-    after=[];
+  home.activation.installPackages = {
+    data = lib.mkForce "";
+    before = lib.mkForce [];
+    after = lib.mkForce [];
   };
 
   home.file = {
