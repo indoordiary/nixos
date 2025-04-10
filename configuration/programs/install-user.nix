@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ../desktop/theme/default.nix
@@ -16,6 +16,6 @@
     vscode-fhs
     typora
 
-    zen-browser
+    inputs.zen-browser.packages.${pkgs.system}.beta
   ];
 }
