@@ -10,7 +10,7 @@ in
   programs.home-manager.enable = true;
   home.username = "chenhsi";
   home.homeDirectory = "/home/chenhsi";
-  home.stateVersion = "25.05";
+  home.stateVersion = "24.11";
 
   fonts.fontconfig.enable = true;
 
