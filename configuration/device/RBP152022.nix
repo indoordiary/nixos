@@ -8,17 +8,18 @@
     '';
 
   hardware.cpu.amd.updateMicrocode = true;
-  hardware.graphics = {
+  hardware.opengl = {
       enable = true;
       extraPackages = with pkgs; [
         vulkan-tools
         vulkan-validation-layers
         mesa
-        driversi686Linux.mesa
+        amdvlk
       ];
       extraPackages32 = with pkgs.pkgsi686Linux; [
-        libva-mesa-driver
-        mesa-vulkan-drivers
+        mesa.drivers
+        vulkan-loader
+        pkgs.driversi686Linux.amdvlk
       ];
     };
 }
