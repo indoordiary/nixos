@@ -33,6 +33,7 @@
         specialArgs = { 
           inherit inputs;
           lib = nixpkgs.lib;
+          config = { _module.args = { inherit pkgs; }; };  # 确保 config 可用
         };
         
         modules = [
@@ -47,9 +48,9 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.chenhsi = { pkgs, inputs, lib, ... }: 
+              users.chenhsi = { config, pkgs, inputs, lib, ... }:  # 添加 config 参数
                 import ./configuration/home.nix { 
-                  inherit inputs pkgs lib;  # 关键：传递所有参数
+                  inherit config inputs pkgs lib;  # 传递 config
                 };
               backupFileExtension = "backup";
             };
@@ -61,7 +62,10 @@
       
       homeConfigurations.chenhsi = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = { 
+          inherit inputs;
+          config = { _module.args = { inherit pkgs; }; };  # 确保 config 可用
+        };
         modules = [ ./configuration/home.nix ];
       };
     };
