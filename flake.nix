@@ -30,7 +30,7 @@
       };
 
     in {
-      nixosConfigurations.BrokenShine-Desktop = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.ChenHsi-Desktop = nixpkgs.lib.nixosSystem {
       
         inherit system;
 
