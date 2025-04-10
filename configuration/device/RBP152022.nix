@@ -7,8 +7,6 @@
       options amdgpu.audio=1
     '';
 
-  boot.initrd.kernelModules = [ "amdgpu" ];
-
   hardware.cpu.amd.updateMicrocode = true;
   hardware.graphics = {
       enable = true;

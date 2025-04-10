@@ -7,24 +7,11 @@
   ];
 
   programs.home-manager.enable = true;
-  home.username = "brokenshine";
-  home.homeDirectory = "/home/brokenshine";
+  home.username = "chenhsi";
+  home.homeDirectory = "/home/chenhsi";
   home.stateVersion = "25.05";
 
   fonts.fontconfig.enable = true;
-
-  dconf = {
-    enable = true;
-    settings = {
-      "org/virt-manager/virt-manager/connections" = {
-        autoconnect = ["qemu:///system"];
-        uris = ["qemu:///system"];
-      };
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-      };
-    };
-  };
 
   xdg = {
     enable = true;
