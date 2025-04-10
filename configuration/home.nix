@@ -39,7 +39,7 @@
     data ="";
     before=[];
     after=[];
-  }
+  };
 
   home.file = {
     nix-profile = {
