@@ -12,7 +12,6 @@
         canTouchEfiVariables = true;
         efiSysMountPoint = "/boot";
       };
-      timeout = 3;
     };
   };
 }
