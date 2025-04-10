@@ -3,11 +3,6 @@
   imports = [
     ../desktop/theme/default.nix
   ];
-  
-  inputs.zen-browser = {
-    url = "github:0xc000022070/zen-browser-flake";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
 
   home.packages = with pkgs; [
     yesplaymusic
@@ -22,6 +17,6 @@
     vscode-fhs
     typora
 
-    inputs.zen-browser.packages.${system}.beta
+    inputs.zen-browser.packages.${pkgs.system}.beta
   ];
 }
