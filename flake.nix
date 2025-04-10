@@ -42,11 +42,19 @@
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             home-manager.users.chenhsi = ./configuration/home.nix;
+
+            # 正确传给 home.nix 的 specialArgs
+            home-manager.extraSpecialArgs = {
+              inputs = {
+                zen-browser = zen-browser;
+              };
+            };
           }
 
           genRev
         ];
 
+        # 这个给系统层的 modules 用，不影响 home.nix
         specialArgs = {
           inputs = {
             zen-browser = zen-browser;
