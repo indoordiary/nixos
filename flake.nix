@@ -47,6 +47,8 @@
             home-manager.useUserPackages = true;
             home-manager.users.chenhsi = import ./configuration/home.nix {
               inherit system;
+              pkgs = nixpkgs.legacyPackages.${system};
+              lib  = nixpkgs.lib;
               inputs = {
                 zen-browser = zen-browser;
               };
