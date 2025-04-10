@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, inputs lib, ... }:
 
 {
   imports = [
@@ -35,7 +35,11 @@
   };
   
   
-  home.activation.installPackages = lib.mkForce null;
+  home.activation.installPackages = lib.mkForce{
+    data ="";
+    before=[];
+    after=[];
+  }
 
   home.file = {
     nix-profile = {
