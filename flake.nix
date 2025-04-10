@@ -45,19 +45,13 @@
      	    {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.chenhsi = import ./configuration/home.nix {
-              inherit system;
-              pkgs = nixpkgs.legacyPackages.${system};
-              lib  = nixpkgs.lib;
-              inputs = {
-                zen-browser = zen-browser;
-              };
-            };
+            home-manager.users.chenhsi = import ./configuration/home.nix;
             home-manager.backupFileExtension = "backup";
            }
 
           genRev
         ];
+
         specialArgs = { 
           inputs = {
             zen-browser = zen-browser;
