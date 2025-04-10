@@ -16,6 +16,6 @@
     vscode-fhs
     typora
 
-    zen-browser.packages.${system}.beta
+    zen-browser
   ];
 }
