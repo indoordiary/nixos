@@ -1,0 +1,150 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "spacing": 5,
+    "height": 42,
+    "margin": "0 10 10 10",
+    
+    "modules-left": ["group/power"],
+    "modules-center": ["wlr/taskbar"],
+    "modules-right": ["tray","group/status","clock"],
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 28,
+        "spacing": 3,
+        "on-click-middle": "close",
+        "tooltip-format": "{title}",
+        "ignore-list": [
+           "Alacritty"
+        ],
+        "on-click": "activate"
+    },
+
+    "group/status": {
+		"orientation": "inherit",
+		"modules": [
+            "battery",
+			"cpu",
+			"memory",
+            "network",
+            "wireplumber",
+            "backlight",
+		],
+        "drawer": {
+            "transition-duration": 400,
+            "children-class": "not-battery",
+            "transition-left-to-right": false,
+        },
+	},
+
+    "clock": {
+        "interval": 1,
+        "format": "\uf017 {:%H:%M:%S}",
+        "tooltip": true,
+        "tooltip-format": "\uf133 {:%Y-%m-%d %H:%M:%S}",
+        "on-click": "fuzzel",
+    },
+
+    "cpu": {
+        "interval": 1,
+        "format": "\uf2db {usage}%",
+        "tooltip": true
+    },
+
+    "battery": {
+        "interval": 1,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": true
+    },
+    
+    "backlight": {
+        "scroll-step": 5,
+        "format": "{percent}% {icon}",
+        "format-icons": [""],
+        "min-length": 3,
+        "on-click": "brightnessctl set 5%+",
+        "on-click-right": "brightnessctl set 5%-",
+    },
+    
+    "memory": {
+        "interval": 1,
+        "format": "\uf538 {used}G",
+        "tooltip": true,
+        "tooltip-format": "RAM: {used}G / {total}G\nSwap: {swapUsed}G / {swapTotal}G",
+		"on-click": "alacritty --command btop",
+    },
+    
+    "network": {
+        "interval": 1,
+        "format-wifi": "\uf1eb {essid} ({signalStrength}%)",
+        "format-ethernet": "\uf6ff {ipaddr}/{cidr}",
+        "format-linked": "\uf059 No IP ({ifname})",
+        "format-disconnected": "\uf071 Disconnected",
+        "tooltip-format": "{ifname} {ipaddr}/{cidr} via {gwaddr}",
+        "format-alt": "\uf6ff {ifname}: {ipaddr}/{cidr}",
+        "on-click": "cmst",
+    },
+    
+    "wireplumber": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-muted": "\uf6a9",
+        "format-bluetooth": "{icon}\uf294 {volume}%",
+        "format-bluetooth-muted": "\ufa69 {icon}\uf294",
+        "format-icons": {
+            "default": ["\uf026", "\uf027", "\uf028"]
+        },
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["AudioRelay Virtual Sink", "Recorder Sink"]
+    },
+
+    "group/power": {
+		"orientation": "inherit",
+		"modules": [
+            "custom/lock",
+			"custom/poweroff",
+			"custom/reboot",
+		],
+        "drawer": {
+            "transition-duration": 400,
+            "children-class": "not-lock",
+            "transition-left-to-right": true,
+        },
+	},
+
+    "custom/lock": {
+    	"format" : "",
+        "tooltip": true,
+        "tooltip-format": "Lock",
+        "on-click": "gtklock",
+    },
+
+    "custom/poweroff": {
+    	"format" : "",
+        "tooltip": true,
+        "tooltip-format": "Poweroff",
+        "on-click": "systemctl poweroff",
+    },
+
+    "custom/reboot": {
+    	"format" : "",
+        "tooltip": true,
+        "tooltip-format": "Reboot",
+        "on-click": "systemctl reboot",
+    },
+
+}

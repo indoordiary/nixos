@@ -1,0 +1,151 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "Sarasa Mono SC";
+    font-weight: 500;
+    font-size: 16px;
+
+    border-radius:20px;
+    text-shadow: none;
+    
+    transition-property: background;
+    transition-duration: 0.2s;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#clock,
+#cpu,
+#memory,
+#network,
+#wireplumber,
+#tray,
+#window,
+#battery,
+#custom-lock,
+#custom-poweroff,
+#custom-reboot,
+#backlight,
+#taskbar,
+
+#battery {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    color: #93abbe;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > * {
+    margin-left: 12px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > * {
+    margin-right: 12px;
+}
+
+#clock {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    color: #eefff1;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+#cpu {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    color: #FE968B;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+#backlight {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    color: #FFD700;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+#memory {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    color: #FFEAAA;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+#wireplumber {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    color: #b0f5e5;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+#network {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    color: #8eb1f2;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+#tray {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+#taskbar {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+#window {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    font-family: 'Sarasa Mono SC', sans-serif;
+    font-weight: 400;
+    color: #cbecff;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+#custom-lock {
+	color: #B5E8E0;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+#custom-poweroff {
+	color: #df6a76;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+#custom-reboot {
+	color: #e8c55d;
+    background-color: rgba(32, 32, 32, 0.6);
+}
+
+
