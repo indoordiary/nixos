@@ -58,6 +58,10 @@
 
           genRev
         ];
-    };
+        specialArgs = { 
+          inputs = {
+            zen-browser = zen-browser;
+        };
+     };
   });
 }
