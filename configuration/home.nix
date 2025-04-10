@@ -1,14 +1,18 @@
 { config, pkgs, lib, inputs, ... }:
 let
-in {
+  zen-browser-pkg = inputs.zen-browser.packages.${pkgs.system}.beta;
+in
+{
   imports = [
-    (import ./programs/install-user.nix { inherit pkgs inputs; })
+    (import ./programs/install-user.nix { 
+      inherit pkgs inputs; 
+    })
   ];
 
   programs.home-manager.enable = true;
   home.username = "chenhsi";
   home.homeDirectory = "/home/chenhsi";
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   fonts.fontconfig.enable = true;
 
