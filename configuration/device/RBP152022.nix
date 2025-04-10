@@ -14,7 +14,7 @@
         vulkan-tools
         vulkan-validation-layers
         mesa
-        libva-mesa-driver
+        driversi686Linux.mesa
         mesa-vulkan-drivers
       ];
       extraPackages32 = with pkgs.pkgsi686Linux; [
