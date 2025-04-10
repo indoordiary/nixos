@@ -1,8 +1,7 @@
 { config, pkgs, lib, inputs, ... }:
 {
   imports = [
-    ./programs/install-user.nix
-    # ./desktop/services/dconf-gnome.nix
+    (import ./programs/install-user.nix { inherit pkgs inputs; })
   ];
 
   programs.home-manager.enable = true;
