@@ -1,5 +1,5 @@
 {
-  description = "self-using configuration.";
+  description = "Self-managed NixOS Configuration";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
@@ -15,18 +15,20 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, ... }:
+  outputs = { self, nixpkgs, home-manager, zen-browser, ... } @ inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      genRev = {
+      
+      revisionInfo = {
         system.configurationRevision = self.rev or null;
         system.nixos.label = with builtins;
           if self.sourceInfo ? lastModifiedDate && self.sourceInfo ? shortRev
           then "${substring 0 8 self.sourceInfo.lastModifiedDate}.${self.sourceInfo.shortRev}"
           else "dirty";
       };
-    in {
+    in
+    {
       nixosConfigurations.ChenHsi-Desktop = nixpkgs.lib.nixosSystem {
         inherit system;
 
@@ -38,21 +40,28 @@
           ./configuration/device/RBP152022.nix
 
           home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "backup";
-            home-manager.users.chenhsi = ./configuration/home.nix;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "backup";
+              
+              users.chenhsi = {
+                imports = [ ./configuration/home.nix ];
+              };
+              
+              # 关键修正：传递完整 inputs 对象
+              extraSpecialArgs = { 
+                inherit inputs; 
+                inherit (inputs) zen-browser; 
+              };
+            };
+          }
 
-          genRev
+          revisionInfo
         ];
 
-        # 这个给系统层的 modules 用，不影响 home.nix
-        specialArgs = {
-          inputs = {
-            zen-browser = zen-browser;
-          };
-        };
+        # 系统层级的参数传递
+        specialArgs = { inherit inputs; };
       };
     };
 }
