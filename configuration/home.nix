@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
+
 let
   inputs = config._module.args.inputs;
-in
-{
+in {
   imports = [
     (import ./programs/install-user.nix { inherit pkgs inputs; })
   ];
