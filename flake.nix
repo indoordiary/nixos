@@ -42,7 +42,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.chenhsi = { pkgs, inputs, ... }: 
+              users.chenhsi = { pkgs, inputs, lib, ... }: 
                 import ./configuration/home.nix { inherit inputs pkgs; };
               backupFileExtension = "backup";
             };
