@@ -43,7 +43,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.chenhsi = { pkgs, inputs, lib, ... }: 
-                import ./configuration/home.nix { inherit inputs pkgs; };
+                import ./configuration/home.nix { inherit inputs pkgs lib; };
               backupFileExtension = "backup";
             };
           }
