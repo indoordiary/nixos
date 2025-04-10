@@ -2,7 +2,6 @@
   description = "self-using configuration.";
 
   inputs = {
-
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
     home-manager = {
@@ -16,9 +15,8 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager,  zen-browser, ... }:
-
-    (let
+  outputs = { self, nixpkgs, home-manager, zen-browser, ... }:
+    let
       system = "x86_64-linux";
       genRev = {
         system.configurationRevision = self.rev or null;
@@ -28,10 +26,8 @@
             then "${substring 0 8 self.sourceInfo.lastModifiedDate}.${self.sourceInfo.shortRev}"
             else "dirty";
       };
-
     in {
       nixosConfigurations.ChenHsi-Desktop = nixpkgs.lib.nixosSystem {
-      
         inherit system;
 
         modules = [
@@ -42,20 +38,21 @@
           ./configuration/device/RBP152022.nix
 
           home-manager.nixosModules.home-manager
-     	    {
+          {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.chenhsi = import ./configuration/home.nix;
             home-manager.backupFileExtension = "backup";
-           }
+          }
 
           genRev
         ];
 
         specialArgs = { 
           inputs = {
-            zen-browser = zen-browser;
+            inherit zen-browser;
+          };
         };
-     };
-  });
+      };
+    };
 }
