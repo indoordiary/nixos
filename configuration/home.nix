@@ -35,11 +35,7 @@
   };
   
   
-  home.activation.installPackages = {
-    data = lib.mkForce "";
-    before = lib.mkForce [];
-    after = lib.mkForce [];
-  };
+  home.activation.installPackages = lib.mkForce null;
 
   home.file = {
     nix-profile = {
