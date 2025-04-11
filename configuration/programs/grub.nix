@@ -4,7 +4,7 @@
     loader = {
       grub = {
         enable = true;
-        device = "/dev/nvme0n1p5";
+        device = "nodev";
         efiSupport = true;
         useOSProber = true;
       };
