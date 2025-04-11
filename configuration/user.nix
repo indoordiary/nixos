@@ -7,7 +7,7 @@
       isNormalUser = true;
       extraGroups = [ "wheel" "adbuser" "audio" "video" "input" "docker" "networkmanager" ];
       useDefaultShell = true;
-      hashedPassword = "$y$j9T$n/ymRgCEJ.hDWTIbs1zgy.$DScp0RP5zKv4AZJfEKy5nxQQqL0JZkoBHccbTh5xco1";
+      hashedPassword = "$6$8/ZJ0jr/BWf4at92$PmRuEML2eiCHcRe/vuc54xgSkU.T7bO6ljUqczhkpw3kAv1mTl.PLMOhRuG.yIiEklJGwcHq3szit4PPkZaEM0";
     };
   };
 
