@@ -29,6 +29,12 @@
       };
     in
     {
+      devShells.${system}.default = pkgs.mkShell {
+        packages = with pkgs; [
+          git
+          nixpkgs-fmt
+        ];
+      };
       nixosConfigurations.ChenHsi-Desktop = nixpkgs.lib.nixosSystem {
         inherit system;
 
@@ -49,7 +55,6 @@
                 imports =  ./configuration/home.nix ;
               };
               
-               关键修正：传递完整 inputs 对象
               extraSpecialArgs = { 
                 inherit inputs; 
                 inherit (inputs) zen-browser; 
@@ -60,7 +65,6 @@
           revisionInfo
         ;
 
-         系统层级的参数传递
         specialArgs = { inherit inputs; };
       };
     };
