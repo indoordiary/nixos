@@ -9,6 +9,13 @@ in
     })
   ];
 
+  programs.home-manager.enable = true;
+  home.username = "chenhsi";
+  home.homeDirectory = "/home/chenhsi";
+  home.stateVersion = "25.05";
+
+  fonts.fontconfig.enable = true;
+
   dconf = {
     enable = true;
     settings = {
@@ -21,14 +28,6 @@ in
       };
     };
   };
-
-
-  programs.home-manager.enable = true;
-  home.username = "chenhsi";
-  home.homeDirectory = "/home/chenhsi";
-  home.stateVersion = "25.05";
-
-  fonts.fontconfig.enable = true;
 
   xdg = {
     enable = true;
