@@ -29,6 +29,12 @@
       };
     in
     {
+      devShells.${system}.default = pkgs.mkShell {
+        packages = with pkgs; [
+          git
+          nixpkgs-fmt
+        ];
+      };
       nixosConfigurations.ChenHsi-Desktop = nixpkgs.lib.nixosSystem {
         inherit system;
 
