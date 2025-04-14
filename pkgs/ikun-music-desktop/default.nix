@@ -1,8 +1,5 @@
-{
-  sources,
-  appimageTools,
-  ...
-}:
+{ sources, appimageTools, ... }:
+
 let
   pname = sources.ikun-music-desktop.pname;
   version = sources.ikun-music-desktop.version;
