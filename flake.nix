@@ -34,7 +34,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ikun-music = {
+    ikun-music-desktop = {
       url = "github:ikunshare/ikun-music-desktop";
       flake = false;
     };
