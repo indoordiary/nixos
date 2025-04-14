@@ -199,7 +199,7 @@ export default {
     },
 
     desktop: {
-        avatar: Option(`/home/${USER}/.config/ags/assets/johny.jpg`, {
+        avatar: Option(`/home/${USER}/.config/ags/assets/furina.png`, {
             'scssFormat': v => `"${v}"`,
             'type': 'img',
             'note': 'displayed in quicksettings and locksreen',
