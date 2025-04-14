@@ -1,0 +1,128 @@
+{
+    "bibata-hyprcursor": {
+        "cargoLocks": null,
+        "date": "2024-06-18",
+        "extract": null,
+        "name": "bibata-hyprcursor",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ful1e5",
+            "repo": "Bibata_Cursor",
+            "rev": "35ccfe209a808e40d6c2ca60a46cbe4faf68b690",
+            "sha256": "sha256-kIKidw1vditpuxO1gVuZeUPdWBzkiksO/q2R/+DUdEc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "35ccfe209a808e40d6c2ca60a46cbe4faf68b690"
+    },
+    "librime-charcode": {
+        "cargoLocks": null,
+        "date": "2024-03-19",
+        "extract": null,
+        "name": "librime-charcode",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rime",
+            "repo": "librime-charcode",
+            "rev": "55e7f563e999802d41a13ba02657c1be4b2011b4",
+            "sha256": "sha256-KfKkpph+2ChQpkkGKubmpg/18uPX9qUHTqJT1PSGorI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "55e7f563e999802d41a13ba02657c1be4b2011b4"
+    },
+    "librime-lua": {
+        "cargoLocks": null,
+        "date": "2024-12-21",
+        "extract": null,
+        "name": "librime-lua",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "hchunhui",
+            "repo": "librime-lua",
+            "rev": "e3912a4b3ac2c202d89face3fef3d41eb1d7fcd6",
+            "sha256": "sha256-zx0F41szn5qlc2MNjt1vizLIsIFQ67fp5cb8U8UUgtY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "e3912a4b3ac2c202d89face3fef3d41eb1d7fcd6"
+    },
+    "librime-proto": {
+        "cargoLocks": null,
+        "date": "2023-10-17",
+        "extract": null,
+        "name": "librime-proto",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "lotem",
+            "repo": "librime-proto",
+            "rev": "657a923cd4c333e681dc943e6894e6f6d42d25b4",
+            "sha256": "sha256-HdypebfmzreSdEQBwbvRG6sJZPASP+e8Tew+GrMnpOQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "657a923cd4c333e681dc943e6894e6f6d42d25b4"
+    },
+    "rime-ice": {
+        "cargoLocks": null,
+        "date": "2025-04-06",
+        "extract": null,
+        "name": "rime-ice",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "iDvel",
+            "repo": "rime-ice",
+            "rev": "51777daedbe4783c3b79f0246d775e4b6d978cbc",
+            "sha256": "sha256-cFaFgChhpgEiJw+dHl3Hr3T2UQF+Vy6u36JWY+cYBNo=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "51777daedbe4783c3b79f0246d775e4b6d978cbc"
+    },
+    "wallpaper": {
+        "cargoLocks": null,
+        "date": "2024-12-12",
+        "extract": null,
+        "name": "wallpaper",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "wuliuqii",
+            "repo": "wallpaper",
+            "rev": "4e74d42ab8ac6bc845f0c40416343d70c52a72bb",
+            "sha256": "sha256-HFAG0kFI6QbaA7qn4PRcDs6gu6LhPw1cXwGgsdRUGsY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "4e74d42ab8ac6bc845f0c40416343d70c52a72bb"
+    }
+}

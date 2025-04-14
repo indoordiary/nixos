@@ -1,0 +1,29 @@
+[rime-ice]
+src.git = "https://github.com/iDvel/rime-ice"
+fetch.github = "iDvel/rime-ice"
+
+[librime-charcode]
+src.git = "https://github.com/rime/librime-charcode.git"
+fetch.github = "rime/librime-charcode"
+
+[librime-lua]
+src.git = "https://github.com/hchunhui/librime-lua"
+fetch.github = "hchunhui/librime-lua"
+
+[librime-proto]
+src.git = "https://github.com/lotem/librime-proto.git"
+fetch.github = "lotem/librime-proto"
+
+[wallpaper]
+src.git = "https://github.com/wuliuqii/wallpaper.git"
+fetch.github = "wuliuqii/wallpaper"
+
+[bibata-hyprcursor]
+src.git = "https://github.com/ful1e5/Bibata_Cursor.git"
+fetch.github = "ful1e5/Bibata_Cursor"
+
+[ikun-music-desktop]
+src.github = "ikunshare/ikun-music-desktop"
+src.from_pattern = "v(.*)"
+src.to_pattern = "\\1"
+fetch.url = "https://github.com/ikunshare/ikun-music-desktop/releases/download/v$ver/ikun-music-desktop_$ver_x64.AppImage"
