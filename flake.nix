@@ -47,7 +47,7 @@
 
     #WARN: private repo
     monolisa = {
-      url = "git+ssh://git@github.com/indoordiary/MonoLisa/main";
+      url = "https://github.com/indoordiary/MonoLisa";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
