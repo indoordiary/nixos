@@ -42,7 +42,7 @@
     vutron-music = {
       url = "github:stark81/VutronMusic";
       flake = false;
-    }
+    };
 
 
     sops-nix = {
