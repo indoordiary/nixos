@@ -98,7 +98,7 @@
                       [ ./home ]
                       ++ [
                         inputs.sops-nix.homeManagerModules.sops
-                        inputs.catppuccin.homeManagerModules.catppuccin
+                        inputs.catppuccin.homeModules.catppuccin
                       ];
                   };
                 };
