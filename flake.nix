@@ -40,7 +40,7 @@
     };
 
     vutron-music = {
-      url = "github:stark81/VutronMusic"
+      url = "github:stark81/VutronMusic";
       flake = false;
     }
 
