@@ -19,7 +19,7 @@
 
       # monospace fonts
       jetbrains-mono
-      inputs.monolisa.packages.${pkgs.system}.monolisa
+      inputs.monolisa.packages.${pkgs.system}.monolisa-nerdfont-patch
 
       # nerdfonts
       nerd-fonts.jetbrains-mono
