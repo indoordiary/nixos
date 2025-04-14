@@ -19,7 +19,7 @@
 
       # monospace fonts
       jetbrains-mono
-      inputs.monaco.packages.${pkgs.system}.monaco
+      inputs.monolisa.packages.${pkgs.system}.monolisa
 
       # nerdfonts
       nerd-fonts.jetbrains-mono
@@ -39,7 +39,7 @@
         ];
         monospace = [
           # "JetBrains Mono"
-          "MonacoNerdFont"
+          "MonoLisa"
         ];
         emoji = [ ];
       };

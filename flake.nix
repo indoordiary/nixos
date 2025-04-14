@@ -56,8 +56,8 @@
 
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
-    monaco = {
-      url = "github:thep0y/monaco-nerd-font";
+    monolisa = {
+      url = "github:Entity1011/MonoLisa";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
