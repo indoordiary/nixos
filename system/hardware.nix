@@ -11,7 +11,7 @@
       enable = true;
       extraPackages  = with pkgs; [ mesa ];
       enable32Bit = true;
-      extraPackages32 = with pkgs.driversi686Linux;[ mesa ];
+      extraPackages32 = with pkgs.driversi686Linux; [ mesa ];
     };
 
     amdgpu = {

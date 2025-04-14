@@ -48,8 +48,5 @@ in
 
     # Editor
     typora
-    
-    # inpus
-    inputs.zen-browser.packages."${system}".beta
   ];
 }
