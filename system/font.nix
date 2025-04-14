@@ -39,7 +39,7 @@
         ];
         monospace = [
           # "JetBrains Mono"
-          "Monaco"
+          "MonacoNerdFont"
         ];
         emoji = [ ];
       };

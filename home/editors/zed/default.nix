@@ -43,8 +43,8 @@ lib.mkIf config.optional.dev.zed {
       load_direnv = "direct";
       ui_font_size = 18;
       buffer_font_size = 20;
-      ui_font_family = "Monaco";
-      buffer_font_family = "Monaco";
+      ui_font_family = "MonacoNerdFont";
+      buffer_font_family = "MonacoNerdFont";
       format_on_save = "on";
       scrollbar.show = "never";
       relative_line_numbers = true;

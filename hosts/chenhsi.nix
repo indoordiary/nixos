@@ -4,7 +4,7 @@
 
   profile = {
     terminal = "foot";
-    font = "Monaco";
+    font = "MonacoNerdFont";
     darkMode = false;
     browser = "firefox";
     wallpaper = "${pkgs.wallpaper}/7qlsln.jpg";
