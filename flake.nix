@@ -84,7 +84,7 @@
           };
           modules = [
             ./system
-            ./machines/laptop
+            ./hosts/laptop
 
             inputs.home-manager.nixosModules.home-manager
             inputs.catppuccin.nixosModules.catppuccin
