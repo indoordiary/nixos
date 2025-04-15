@@ -22,7 +22,7 @@ lib.mkIf config.optional.hypr.enable {
   wayland.windowManager.hyprland = {
     settings = {
       monitor = [
-        "HDMI-A-1, 2560x1440@144, 0x0, 1.25"
+        "HDMI-A-1, 2560x1440@144, auto, 1.25"
         "eDP-1, 3200x2000@90, 0x0, 2"
       ];
 
@@ -104,8 +104,10 @@ lib.mkIf config.optional.hypr.enable {
         ];
 
       bindl = [
-
+        "switch:on:Lid Switch,exec,hyprctl keyword monitor 'eDP-1, 3200x2000@90, 0x0, 2'"
+        "switch:off:Lid Switch,exec,hyprctl keyword monitor 'eDP-1, disable'"
       ];
+
 
 
       bindle = [
