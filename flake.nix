@@ -73,10 +73,7 @@
     let
       system = "x86_64-linux";
       selfPkgs = import ./pkgs;
-      pkgs = import nixpkgs {
-        inherit system; 
-     #   config.allowUnfree =true;
-      };
+      pkgs = import nixpkgs { inherit system; };
     in
     {
       nixosConfigurations = {
@@ -87,7 +84,7 @@
           };
           modules = [
             ./system
-            ./hosts/laptop
+            ./machines/laptop
 
             inputs.home-manager.nixosModules.home-manager
             inputs.catppuccin.nixosModules.catppuccin
@@ -101,13 +98,13 @@
                   extraSpecialArgs = {
                     inherit inputs;
                   };
-                  sharedModules = [ (./. + "/hosts/${config.profile.userName}.nix") ];
+                  sharedModules = [ (./. + "/machines/${config.profile.userName}.nix") ];
                   users.${config.profile.userName} = {
                     imports =
                       [ ./home ]
                       ++ [
                         inputs.sops-nix.homeManagerModules.sops
-                        inputs.catppuccin.homeModules.catppuccin
+                        inputs.catppuccin.homeManagerModules.catppuccin
                       ];
                   };
                 };
