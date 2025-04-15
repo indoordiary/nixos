@@ -104,12 +104,11 @@ lib.mkIf config.optional.hypr.enable {
         ];
 
       bindl = [
-        # 合盖禁用显示器（转义内部双引号）
-        ''switch:off:"Lid Switch",exec,hyprctl keyword monitor \"eDP-1,disable\"''
-  
-        # 开盖启用显示器（转义内部双引号）
-        ''switch:on:"Lid Switch",exec,hyprctl keyword monitor \"eDP-1,3200x2000@90,0x0,2\"''
-      ];
+  # 使用单引号包裹 hyprctl 参数
+  ''switch:off:"Lid Switch",exec,hyprctl keyword monitor 'eDP-1,disable' ''
+  ''switch:on:"Lid Switch",exec,hyprctl keyword monitor 'eDP-1,3200x2000@90,0x0,2' ''
+];
+
 
 
       bindle = [
