@@ -2,9 +2,9 @@
 {
   home = {
     packages = with pkgs; [
-      #ikun-music-desktop
+      ikun-music-desktop
       pavucontrol
-      #vutron-music
+      vutron-music
     ];
   };
 
