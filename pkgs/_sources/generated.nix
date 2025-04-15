@@ -13,6 +13,14 @@
     };
     date = "2024-06-18";
   };
+  ikun-music-desktop = {
+    pname = "ikun-music-desktop";
+    version = "3.2.2";
+    src = fetchurl {
+      url = "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.2.2/ikun-music-desktop_3.2.2_x64.AppImage";
+      sha256 = "sha256-Koqlq/LsA0/+rr3CKVI60I1NmIwNGS4gy27ahst1LRo=";
+    };
+  };
   librime-charcode = {
     pname = "librime-charcode";
     version = "55e7f563e999802d41a13ba02657c1be4b2011b4";
@@ -60,6 +68,14 @@
       sha256 = "sha256-cFaFgChhpgEiJw+dHl3Hr3T2UQF+Vy6u36JWY+cYBNo=";
     };
     date = "2025-04-06";
+  };
+  vutron-music = {
+    pname = "vutron-music";
+    version = "1.7.5";
+    src = fetchurl {
+      url = "https://github.com/stark81/VutronMusic/releases/download/v1.7.5/VutronMusic-1.7.5_X86_64.AppImage";
+      sha256 = "sha256-+jHQ60eYcZzHlgP4hHwkR8Ov5ZTK9T2uXyQl3IYAgwo=";
+    };
   };
   wallpaper = {
     pname = "wallpaper";

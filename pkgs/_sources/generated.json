@@ -20,6 +20,21 @@
         },
         "version": "35ccfe209a808e40d6c2ca60a46cbe4faf68b690"
     },
+    "ikun-music-desktop": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "ikun-music-desktop",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Koqlq/LsA0/+rr3CKVI60I1NmIwNGS4gy27ahst1LRo=",
+            "type": "url",
+            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.2.2/ikun-music-desktop_3.2.2_x64.AppImage"
+        },
+        "version": "3.2.2"
+    },
     "librime-charcode": {
         "cargoLocks": null,
         "date": "2024-03-19",
@@ -103,6 +118,21 @@
             "type": "github"
         },
         "version": "51777daedbe4783c3b79f0246d775e4b6d978cbc"
+    },
+    "vutron-music": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "vutron-music",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-+jHQ60eYcZzHlgP4hHwkR8Ov5ZTK9T2uXyQl3IYAgwo=",
+            "type": "url",
+            "url": "https://github.com/stark81/VutronMusic/releases/download/v1.7.5/VutronMusic-1.7.5_X86_64.AppImage"
+        },
+        "version": "1.7.5"
     },
     "wallpaper": {
         "cargoLocks": null,
