@@ -7,6 +7,7 @@
     dbus.packages = [ pkgs.gcr ];
     power-profiles-daemon.enable = true;
     gnome.gnome-keyring.enable = true;
+    blueman.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
