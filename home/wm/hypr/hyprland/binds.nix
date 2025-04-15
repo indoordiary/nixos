@@ -104,10 +104,12 @@ lib.mkIf config.optional.hypr.enable {
         ];
 
       bindl = [
-        # media controls
-        "switch:on:Lid Switch,exec,hyprctl keyword monitor 'eDP-1, 3200X2000@90, 0x0, 2'"
-        "switch:off:Lid Switch,exec,hyprctl keyword monitor 'eDP-1, disable'"
+      # lid open
+      "switch:on:Lid Switch,exec,hyprctl keyword monitor eDP-1,3200x2000@90,0x0,2"
+      # lid close
+      "switch:off:Lid Switch,exec,hyprctl keyword monitor eDP-1,disable"
       ];
+
 
       bindle = [
         # volume
