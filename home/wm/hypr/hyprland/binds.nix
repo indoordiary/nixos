@@ -104,9 +104,11 @@ lib.mkIf config.optional.hypr.enable {
         ];
 
       bindl = [
-        "switch:on:Lid Switch,exec,hyprctl dispatch dpms on eDP-1"
-        "switch:off:Lid Switch,exec,hyprctl dispatch dpms off eDP-1"
-      ];
+      # 合盖时禁用显示器
+      ''switch:off:"Lid Switch",exec,hyprctl keyword monitor "eDP-1,disable"''
+      # 开盖时重新启用显示器
+      ''switch:on:"Lid Switch",exec,hyprctl keyword monitor "eDP-1,3200x2000@90,0x0,1"''
+    ];
 
 
 
