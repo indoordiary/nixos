@@ -36,7 +36,7 @@ in
     # Utils
     mihomo-party libsForQt5.kdenlive 
     loupe sushi nautilus xdg-utils 
-    fastfetch xorg.xrandr
+    fastfetch xorg.xrandr jaq
 
     # Media
     bilibili
