@@ -15,8 +15,8 @@ src.git = "https://github.com/lotem/librime-proto.git"
 fetch.github = "lotem/librime-proto"
 
 [wallpaper]
-src.git = "https://github.com/wuliuqii/wallpaper.git"
-fetch.github = "wuliuqii/wallpaper"
+src.git = "https://github.com/indoordiary/PicList.git"
+fetch.github = "indoordiary/PicList"
 
 [bibata-hyprcursor]
 src.git = "https://github.com/ful1e5/Bibata_Cursor.git"
