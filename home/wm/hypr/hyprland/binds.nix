@@ -26,6 +26,10 @@ lib.mkIf config.optional.hypr.enable {
         "eDP-1, 3200X2000@90, 0x0, 2"
       ];
 
+      # Lid Open/Close
+      bindl=,switch:on:Lid Switch,exec,hyprctl keyword monitor "eDP-1, 3200X2000@90, 0x0, 2"
+      bindl=,switch:off:Lid Switch,exec,hyprctl keyword monitor "eDP-1, disable"
+
       # mouse movements
       bindm = [
         "$mainMod, mouse:272, movewindow"
