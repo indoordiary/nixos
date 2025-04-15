@@ -13,7 +13,7 @@ in
 
   config = lib.mkIf config.optional.wm {
     programs.anyrun = {
-      enable = true;
+     # enable = true;
 
       config = {
         plugins = [
