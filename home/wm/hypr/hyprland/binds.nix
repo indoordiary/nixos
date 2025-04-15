@@ -104,12 +104,12 @@ lib.mkIf config.optional.hypr.enable {
         ];
 
       bindl = [
-  # 使用单引号包裹 hyprctl 参数
-  ''switch:off:"Lid Switch",exec,hyprctl keyword monitor 'eDP-1,disable' ''
-  ''switch:on:"Lid Switch",exec,hyprctl keyword monitor 'eDP-1,3200x2000@90,0x0,2' ''
+  # 合盖
+  ''switch:off:"Lid Switch",exec,${builtins.toJSON "hyprctl keyword monitor 'eDP-1,disable'"}''
+  
+  # 开盖
+  ''switch:on:"Lid Switch",exec,${builtins.toJSON "hyprctl keyword monitor 'eDP-1,3200x2000@90,0x0,2'"}''
 ];
-
-
 
       bindle = [
         # Volume
