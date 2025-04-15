@@ -79,14 +79,14 @@
   };
   wallpaper = {
     pname = "wallpaper";
-    version = "4e74d42ab8ac6bc845f0c40416343d70c52a72bb";
+    version = "f3f8175209a8d37331dd920b702d2b5c769997c5";
     src = fetchFromGitHub {
-      owner = "wuliuqii";
-      repo = "wallpaper";
-      rev = "4e74d42ab8ac6bc845f0c40416343d70c52a72bb";
+      owner = "indoordiary";
+      repo = "PicList";
+      rev = "f3f8175209a8d37331dd920b702d2b5c769997c5";
       fetchSubmodules = false;
-      sha256 = "sha256-HFAG0kFI6QbaA7qn4PRcDs6gu6LhPw1cXwGgsdRUGsY=";
+      sha256 = "sha256-uXHIYitX5xnGGPusn/tqTudUea9pAFQex11e5zsfCuo=";
     };
-    date = "2024-12-12";
+    date = "2025-04-15";
   };
 }
