@@ -63,7 +63,7 @@ lib.mkIf config.optional.hypr.enable {
           position = "0, -300";
           valign = "top";
           halign = "center";
-        },
+        }
         # User
         {
           monitor = "";
