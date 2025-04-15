@@ -103,10 +103,6 @@ in
     '';
   };
 
-  powerManagement.enable = true;
-  powerManagement.hibernateMode = "suspend";
-
-
   system = {
     autoUpgrade = {
       enable = true;
