@@ -98,7 +98,7 @@
                   extraSpecialArgs = {
                     inherit inputs;
                   };
-                  sharedModules = [ (./. + "/machines/${config.profile.userName}.nix") ];
+                  sharedModules = [ (./. + "/hosts/${config.profile.userName}.nix") ];
                   users.${config.profile.userName} = {
                     imports =
                       [ ./home ]
