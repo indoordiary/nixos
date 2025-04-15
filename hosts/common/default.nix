@@ -42,7 +42,7 @@ with lib;
       };
       wallpaper = mkOption {
         type = types.str;
-        default = "${pkgs.wallpaper}/Charlotte.png";
+        default = "${pkgs.wallpaper}/Charlotte.jpg";
       };
     };
 

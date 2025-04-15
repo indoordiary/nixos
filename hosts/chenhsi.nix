@@ -7,7 +7,7 @@
     font = "MonoLisa";
     darkMode = false;
     browser = "firefox";
-    wallpaper = "${pkgs.wallpaper}/Charlotte.png";
+    wallpaper = "${pkgs.wallpaper}/Charlotte.jpg";
   };
 
   optional = {

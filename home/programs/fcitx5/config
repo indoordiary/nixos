@@ -8,37 +8,37 @@ ActivateKeys=
 # Deactivate Input Method
 DeactivateKeys=
 
-[Hotkey/TriggerKeys]
+[Hotkey/TriggerKeys] # 切换输入法
 0=Control+space
 
-[Hotkey/AltTriggerKeys]
+[Hotkey/AltTriggerKeys]  # 备用切换键
 0=Shift_L
 
-[Hotkey/EnumerateForwardKeys]
+[Hotkey/EnumerateForwardKeys]  # 切换到下一个输入法
 0=Control+Shift_L
 
-[Hotkey/EnumerateBackwardKeys]
+[Hotkey/EnumerateBackwardKeys]  # 切换到上一个输入法
 0=Control+Shift_R
 
-[Hotkey/EnumerateGroupForwardKeys]
+[Hotkey/EnumerateGroupForwardKeys]  # 向前切换输入法组
 0=Super+space
 
-[Hotkey/EnumerateGroupBackwardKeys]
+[Hotkey/EnumerateGroupBackwardKeys]  # 向后切换输入法组
 0=Shift+Super+space
 
-[Hotkey/PrevPage]
+[Hotkey/PrevPage]  # 候选词上一页
 0=Up
 
-[Hotkey/NextPage]
+[Hotkey/NextPage]  # 候选词下一页
 0=Down
 
-[Hotkey/PrevCandidate]
+[Hotkey/PrevCandidate]  # 上一个候选词
 0=Shift+Tab
 
-[Hotkey/NextCandidate]
+[Hotkey/NextCandidate]  # 下一个候选词
 0=Tab
 
-[Hotkey/TogglePreedit]
+[Hotkey/TogglePreedit]   # 切换预编辑状态
 0=Control+Alt+P
 
 [Behavior]
