@@ -5,9 +5,9 @@
   pkgs,
   ...
 }:
-let
-  anyrunPkgs = inputs.anyrun.packages.${pkgs.system};
-in
+#let
+#  anyrunPkgs = inputs.anyrun.packages.${pkgs.system};
+#in
 {
   imports = [ inputs.anyrun.homeManagerModules.default ];
 
