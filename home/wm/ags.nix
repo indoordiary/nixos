@@ -9,19 +9,24 @@
   config = lib.mkIf config.optional.wm {
     home.packages = with pkgs; [
       #   imagemagick
-      #   sassc
-      #   brightnessctl
+      #   hyprpicker
+      wayshot
+      #   swappy
+
+      #   wf-recorder
+      wl-screenrec
+      slurp
+
+      wl-clipboard
+      cliphist
+  
+      brightnessctl
       inotify-tools
       libnotify
-      #   wf-recorder
-      #   swappy
-      #   wayshot
-      #   hyprpicker
-      wl-clipboard
-      #   wl-screenrec
-      #   cliphist
-      #   wlr-randr
-      #   slurp
+      
+      wlr-randr
+      
+      #   sassc  
     ];
   };
 }
