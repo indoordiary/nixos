@@ -57,7 +57,7 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     monolisa = {
-      url = "github:Entity1011/MonoLisa";
+      url = "github:indoordiary/MonoLisa";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
