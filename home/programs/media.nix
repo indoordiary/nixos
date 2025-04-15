@@ -5,6 +5,15 @@
       ikun-music-desktop
       pavucontrol
       vutron-music
+
+      (writeShellScriptBin "qqmusic" ''
+      QT_QPA_PLATFORM=wayland \
+      exec ${pkgs.qqmusic}/bin/qqmusic \
+        --disable-gpu \
+        --disable-software-rasterizer \
+        --in-process-gpu
+    '')
+    
     ];
   };
 

@@ -42,7 +42,7 @@ lib.mkIf config.optional.hypr.enable {
     windowrulev2 =
       let
         float-center-apps = "^(one.alynx.showmethekey|pavucontrol|org.gnome.Loupe|org.gnome.Nautilus|org.kde.kdeconnect.daemon|org.kde.kdeconnect-indicator|org.kde.kdeconnect.app|.blueman-manager-wrapped|nm-applet|nm-connection-editor|imv|mpv)$";
-        media-apps = "^(swappy|com.github.stark81.vutronmusic|com.ikunshare.music.desktop|QQ|thunderbird|Slack|org.telegram.desktop|wechat)$";
+        media-apps = "^(swappy|com.github.stark81.vutronmusic|com.ikunshare.music.desktop|qqmusic|QQ|thunderbird|Slack|org.telegram.desktop|wechat)$";
       in
       [
         # telegram media viewer

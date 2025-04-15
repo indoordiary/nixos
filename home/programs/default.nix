@@ -41,9 +41,6 @@ in
     # Media
     bilibili
 
-    # Music
-    qqmusic
-
     # Social
     qq wechat-uos (wechat) telegram-desktop 
 
