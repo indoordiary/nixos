@@ -35,7 +35,7 @@ in
   home.packages = with pkgs; [
     # Utils
     mihomo-party libsForQt5.kdenlive 
-    loupe sushi nautilus xdg-utils
+    loupe sushi nautilus xdg-utils fastfetch
 
     # Media
     bilibili
