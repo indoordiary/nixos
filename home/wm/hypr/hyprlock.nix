@@ -1,5 +1,4 @@
-{
-  lib,
+{ lib,
   config,
   ...
 }:
@@ -58,14 +57,13 @@ lib.mkIf config.optional.hypr.enable {
         {
           monitor = "";
           text = "$TIME";
-          inherit font_family;
+          font_family = font_family;
           font_size = 120;
           color = "$text";
           position = "0, -300";
           valign = "top";
           halign = "center";
-        }
-
+        },
         # User
         {
           monitor = "";

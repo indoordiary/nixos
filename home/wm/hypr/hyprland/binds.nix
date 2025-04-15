@@ -52,7 +52,7 @@ lib.mkIf config.optional.hypr.enable {
           "$mainMod, d, exec, neovide"
 
           # music player
-          "$mainMod, m, exec, ikun-music-desktop"
+          "$mainMod, m, exec, vutron-music"
 
           # launcher
           "$mainMod, Space, exec, anyrun"
@@ -104,20 +104,28 @@ lib.mkIf config.optional.hypr.enable {
         ];
 
       bindl = [
-      # 合盖时禁用显示器
       ''switch:off:"Lid Switch",exec,hyprctl keyword monitor "eDP-1,disable"''
-      # 开盖时重新启用显示器
       ''switch:on:"Lid Switch",exec,hyprctl keyword monitor "eDP-1,3200x2000@90,0x0,2"''
     ];
 
-
-
       bindle = [
-        # volume
-
-        # backlight
+        # Volume
+        ", XF86AudioRaiseVolume, exec, pamixer -i 5"
+        ", XF86AudioLowerVolume, exec, pamixer -d 5"
+        ", XF86AudioMute, exec, pamixer -t"
+        # Mic
+        ", XF86AudioMicMute, exec, pamixer --default-source -t"
+        # Brightness
+        ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
+        ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
+        # Media
+        ", XF86AudioPlay, exec, playerctl play-pause"
+        ", XF86AudioNext, exec, playerctl next"
+        ", XF86AudioPrev, exec, playerctl previous"
+        
       ];
-    };
+
+      };
 
     extraConfig = ''
       # Resize submap
