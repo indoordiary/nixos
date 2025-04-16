@@ -3,7 +3,7 @@
   ...
 }:
 let
-  font_family = "Noto Sans 10";
+  font_family = "font_family 16";
 in
 
 lib.mkIf config.optional.hypr.enable {
