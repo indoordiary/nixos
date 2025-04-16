@@ -3,7 +3,7 @@
   ...
 }:
 let
-  font_family = "font_family 16";
+  font_family = "${config.profile.font} 10";
 in
 
 lib.mkIf config.optional.hypr.enable {
@@ -25,8 +25,8 @@ lib.mkIf config.optional.hypr.enable {
           text = "Hi there, $USER";
           text_align = "center";      # center/right 或者不写默认为 left
           color = "rgba(200, 200, 200, 1.0)";
-          font_size = 25;
-          font_family = "Noto Sans";
+          inherit font_family;
+          font_size = 120;
           rotate = 0;                # 逆时针度数
 
           position = "0, 80";
@@ -40,7 +40,7 @@ lib.mkIf config.optional.hypr.enable {
           text_align = "center";
           color = "rgba(200, 200, 200, 1.0)";
           font_size = 42;
-          font_family = "Noto Sans";
+          font_family = "font_family";
           rotate = 0;
 
           position = "0, 240";
