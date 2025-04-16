@@ -9,7 +9,7 @@
     browser = "firefox";
     wallpaper = "${pkgs.wallpaper}/charlotte.jpg";
   };
-s
+
   optional = {
     cosmic = false;
     wm = true;
