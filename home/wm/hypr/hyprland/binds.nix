@@ -22,8 +22,8 @@ lib.mkIf config.optional.hypr.enable {
   wayland.windowManager.hyprland = {
     settings = {
       monitor = [
-        "HDMI-A-1, 2560x1440@144, auto, 1.25"
-        "eDP-1, preferred, 0x0, auto"
+        "HDMI-A-1, 2560x1440@144, auto, 1.5"
+        "eDP-1, preferred, 0x0, auto, 2"
       ];
 
       # mouse movements

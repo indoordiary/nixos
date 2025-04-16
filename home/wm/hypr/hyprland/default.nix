@@ -37,15 +37,20 @@ in
     };
 
     home.sessionVariables = {
-      # XDG_CURRENT_DESKTOP = "Hyprland";
-      # XDG_SESSION_DESKTOP = "Hyprland";
-      GDK_SCALE = "2";
-
+      # Wayland 基础环境
       QT_QPA_PLATFORM = "wayland";
+      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
       SDL_VIDEODRIVER = "wayland";
       XDG_SESSION_TYPE = "wayland";
-      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+
+      # GTK 缩放
+      GDK_SCALE = "2";
+      GDK_DPI_SCALE = "0.5";
+
+      # QT 缩放
+      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     };
+
 
     catppuccin.hyprland.enable = true;
     wayland.windowManager.hyprland = {
