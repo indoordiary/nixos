@@ -8,6 +8,7 @@ let
     icon = "wechat";
     comment = "WeChat for Linux";
   };
+in
 {
   imports = [
     ./fcitx5
