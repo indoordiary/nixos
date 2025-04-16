@@ -3,7 +3,7 @@
   ...
 }:
 let
-  font_family = "Noto Sans 10";
+  font_family = "${config.profile.font} 10";
 in
 
 lib.mkIf config.optional.hypr.enable {
@@ -25,8 +25,8 @@ lib.mkIf config.optional.hypr.enable {
           text = "Hi there, $USER";
           text_align = "center";      # center/right 或者不写默认为 left
           color = "rgba(200, 200, 200, 1.0)";
-          font_size = 25;
-          font_family = "Noto Sans";
+          inherit font_family;
+          font_size = 60;
           rotate = 0;                # 逆时针度数
 
           position = "0, 80";
@@ -39,8 +39,8 @@ lib.mkIf config.optional.hypr.enable {
           text = "<span><b>$TIME</b></span>";
           text_align = "center";
           color = "rgba(200, 200, 200, 1.0)";
-          font_size = 42;
-          font_family = "Noto Sans";
+          font_size = 120;
+          font_family = "font_family";
           rotate = 0;
 
           position = "0, 240";
@@ -54,10 +54,6 @@ lib.mkIf config.optional.hypr.enable {
           monitor = "eDP-1";
           size = "200, 50";
           outline_thickness = 3;
-          dots_size = 0.33;           # 0.2 - 0.8
-          dots_spacing = 0.15;        # 0.0 - 1.0
-          dots_center = false;
-          dots_rounding = -1;         # -1 圆形，-2 跟随输入框圆角
           outer_color = "rgb(151, 151, 151)";
           inner_color = "rgb(200, 200, 200)";
           font_color = "rgb(10, 10, 10)";
