@@ -17,8 +17,8 @@
       BROWSER = "${config.profile.browser}";
       TERMINAL = "${config.profile.terminal}";
 
-      QT_AUTO_SCREEN_SCALE_FACTOR = "1"
-      QT_SCALE_FACTOR = "2"
+      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+      QT_SCALE_FACTOR = "2";
 
     };
 
