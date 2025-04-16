@@ -23,7 +23,7 @@ lib.mkIf config.optional.hypr.enable {
     settings = {
       monitor = [
         "HDMI-A-1, 2560x1440@144, auto, 1.25"
-        "eDP-1, 3200x2000@90, 0x0, 2"
+        "eDP-1, preferred, 0x0, 3"
       ];
 
       # mouse movements

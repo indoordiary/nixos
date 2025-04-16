@@ -3,7 +3,7 @@
   ...
 }:
 let
-  font_family = "${config.profile.font} 10";
+  font_family = "Noto Sans 10";
 in
 
 lib.mkIf config.optional.hypr.enable {
@@ -13,67 +13,80 @@ lib.mkIf config.optional.hypr.enable {
 
     settings = {
       general = {
-        # disable_loading_bar = true;
-        hide_cursor = false;
-        grace = 5;
-        # no_fade_in = true;
+        ignore_empty_input = true;
+        disable_loading_bar = true;
+        hide_cursor = true;
       };
 
-      background = [
+      label = [
+        # Hi there, $USER
         {
           monitor = "";
-          path = "${config.profile.wallpaper}"; # Only png supported
-          # path = "screenshot";
-          blur_passes = 3; # 0 disables blur
-          contrast = 0.8916;
-          brightness = 0.8172;
-          vibrancy = 0.1696;
-          vibrancy_darkness = 0.0;
+          text = "Hi there, $USER";
+          text_align = "center";      # center/right 或者不写默认为 left
+          color = "rgba(200, 200, 200, 1.0)";
+          font_size = 25;
+          font_family = "Noto Sans";
+          rotate = 0;                # 逆时针度数
+
+          position = "0, 80";
+          halign = "center";
+          valign = "center";
+        }
+        # $TIME
+        {
+          monitor = "";
+          text = "<span><b>$TIME</b></span>";
+          text_align = "center";
+          color = "rgba(200, 200, 200, 1.0)";
+          font_size = 42;
+          font_family = "Noto Sans";
+          rotate = 0;
+
+          position = "0, 240";
+          halign = "center";
+          valign = "center";
         }
       ];
 
       input-field = [
         {
           monitor = "eDP-1";
-          size = "280, 80";
-          outline_thickness = 2;
-          outer_color = "$base";
-          inner_color = "$base";
-          font_color = "$text";
-          fade_on_empty = false;
-          placeholder_text = "<i>$PROMPT</i>";
-          dots_size = 0.2; # Scale of input-field height, 0.2 - 0.8
-          dots_spacing = 0.2; # Scale of dots' absolute size, 0.0 - 1.0
-          dots_center = true;
+          size = "200, 50";
+          outline_thickness = 3;
+          dots_size = 0.33;           # 0.2 - 0.8
+          dots_spacing = 0.15;        # 0.0 - 1.0
+          dots_center = false;
+          dots_rounding = -1;         # -1 圆形，-2 跟随输入框圆角
+          outer_color = "rgb(151, 151, 151)";
+          inner_color = "rgb(200, 200, 200)";
+          font_color = "rgb(10, 10, 10)";
+          fade_on_empty = true;
+          fade_timeout = 1000;        # ms
+          placeholder_text = "<i>Input Password...</i>";
           hide_input = false;
-          position = "0, -120";
+          rounding = -1;              # -1 完全圆角
+          check_color = "rgb(204, 136, 34)";
+          fail_color = "rgb(204, 34, 34)";
+          fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
+          fail_transition = 300;      # ms
+          capslock_color = -1;
+          numlock_color = -1;
+          bothlock_color = -1;
+          invert_numlock = false;
+          swap_font_color = false;
+
+          position = "0, -20";
           halign = "center";
           valign = "center";
         }
       ];
 
-      label = [
-        # Current time
+      background = [
         {
           monitor = "";
-          text = "$TIME";
-          font_family = font_family;
-          font_size = 120;
-          color = "$text";
-          position = "0, -300";
-          valign = "top";
-          halign = "center";
-        }
-        # User
-        {
-          monitor = "";
-          text = ''Hi <i><span foreground="##$pinkAlpha">$USER</span></i> :)'';
-          font_family = "Roboto";
-          font_size = 35;
-          color = "$overlay0";
-          position = "0, -40";
-          valign = "center";
-          halign = "center";
+          path = "screenshot";      # 若需要截图背景可启用
+          color = "rgba(0, 0, 0, 0.7)";
         }
       ];
     };
