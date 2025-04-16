@@ -31,7 +31,7 @@
       zed = true;
       vscode = true;
 
-      rust = false;
+      rust = true;
       go = false;
       node = true;
       zig = false;
