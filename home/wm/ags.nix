@@ -8,7 +8,8 @@
 {
   config = lib.mkIf config.optional.wm {
     home.packages = with pkgs; [
-      ags
+      mako
+      waybar
       
       #   imagemagick
       #   hyprpicker
