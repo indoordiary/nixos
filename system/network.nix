@@ -14,7 +14,7 @@
     networkmanager = {
       enable = true;
       dns = "systemd-resolved";
-      wifi.powersave = false;
+      wifi.powersave = true;
     };
   };
 

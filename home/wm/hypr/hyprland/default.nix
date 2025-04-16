@@ -40,6 +40,8 @@ in
       # XDG_CURRENT_DESKTOP = "Hyprland";
       # XDG_SESSION_DESKTOP = "Hyprland";
       GDK_SCALE = "2";
+      GDK_DPI_SCALE= "1"
+      QT_SCALE_FACTOR = "2"
 
       QT_QPA_PLATFORM = "wayland";
       SDL_VIDEODRIVER = "wayland";
