@@ -104,8 +104,8 @@ lib.mkIf config.optional.hypr.enable {
         ];
 
       bindl = [
-      ,switch:on:Lid Switch,exec,hyprctl keyword monitor "eDP-1, preferred , 0x0, 2";
-      ,switch:off:Lid Switch,exec,hyprctl keyword monitor "eDP-1, disable";
+      ",switch:on:Lid Switch,exec,hyprctl keyword monitor 'eDP-1, preferred , 0x0, 2' ";
+      ",switch:off:Lid Switch,exec,hyprctl keyword monitor 'eDP-1, disable' ";
       ];
 
       bindle = [
