@@ -30,7 +30,7 @@ in
       GDK_SCALE = "2";               # GTK 全局缩放
       GDK_DPI_SCALE = "0.5";          # 防止 GTK 字体过小
       QT_SCALE_FACTOR = "2";          # QT 全局缩放
-      QT_AUTO_SCREEN_SCALE_FACTOR = "1"; # QT 自动适配屏幕缩放
+      QT_ENABLE_HIDPI= "1"; # QT 自动适配屏幕缩放
       XCURSOR_SIZE = "32";            # 光标大小
       QT_QPA_PLATFORM = "wayland";
       SDL_VIDEODRIVER = "wayland";
