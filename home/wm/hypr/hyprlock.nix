@@ -26,7 +26,7 @@ lib.mkIf config.optional.hypr.enable {
           text_align = "center";      # center/right 或者不写默认为 left
           color = "rgba(200, 200, 200, 1.0)";
           inherit font_family;
-          font_size = 120;
+          font_size = 40;
           rotate = 0;                # 逆时针度数
 
           position = "0, 80";
@@ -39,7 +39,7 @@ lib.mkIf config.optional.hypr.enable {
           text = "<span><b>$TIME</b></span>";
           text_align = "center";
           color = "rgba(200, 200, 200, 1.0)";
-          font_size = 42;
+          font_size = 120;
           font_family = "font_family";
           rotate = 0;
 
