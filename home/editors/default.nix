@@ -2,7 +2,7 @@
 {
   imports = [
     ./helix.nix
-    ./vscode.nix
+    #./vscode.nix
 
     ./zed
     ./nvim
