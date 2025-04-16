@@ -42,7 +42,7 @@ in
     bilibili
 
     # Social
-    qq (QQ) wechat-uos (wechat) telegram-desktop 
+    qq wechat-uos (wechat) telegram-desktop 
 
     # Editor
     typora
