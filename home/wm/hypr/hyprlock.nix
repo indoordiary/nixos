@@ -54,10 +54,6 @@ lib.mkIf config.optional.hypr.enable {
           monitor = "eDP-1";
           size = "200, 50";
           outline_thickness = 3;
-          dots_size = 0.33;           # 0.2 - 0.8
-          dots_spacing = 0.15;        # 0.0 - 1.0
-          dots_center = false;
-          dots_rounding = -1;         # -1 圆形，-2 跟随输入框圆角
           outer_color = "rgb(151, 151, 151)";
           inner_color = "rgb(200, 200, 200)";
           font_color = "rgb(10, 10, 10)";
