@@ -27,7 +27,7 @@ lib.mkIf config.optional.dev.vscode {
 
       "chat.editor.fontSize" = 18;
 
-      "window.menuBarVisibility" = "toggle";
+      "window.menuBarVisibility" = "default";
       "window.newWindowDimensions" = "inherit";
       "window.zoomLevel" = 1;
 
