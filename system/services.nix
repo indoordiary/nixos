@@ -24,9 +24,9 @@
           ids = [ "*" ];
           settings = {
             main = {
-              capslock = "overload(control, esc)";
+              capslock = "overload(, esc)";
               rightalt = "layer(alt)";
-              "tab+l" = "capslock";
+              "control+l" = "capslock";
             };
           };
         };

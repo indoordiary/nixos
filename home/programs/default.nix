@@ -8,6 +8,14 @@ let
     icon = "wechat";
     comment = "WeChat for Linux";
   };
+  QQ = pkgs.makeDesktopItem {
+    name = "QQ";
+    desktopName = "QQ";
+    exec = "QT_SCALE_FACTOR=2 qq %U";
+    terminal = false;
+    icon = "qq";
+    comment = "QQ for Linux";
+  };
 in
 {
   imports = [
@@ -42,7 +50,7 @@ in
     bilibili
 
     # Social
-    qq wechat-uos (wechat) telegram-desktop 
+    qq (QQ) wechat-uos (wechat) telegram-desktop 
 
     # Editor
     typora

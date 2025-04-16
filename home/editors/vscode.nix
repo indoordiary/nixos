@@ -8,7 +8,7 @@
 lib.mkIf config.optional.dev.vscode {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode;
+    package = pkgs.vscode-fhs;
 
     profiles.default.userSettings = {
       "security.workspace.trust.enabled" = false;
