@@ -10,9 +10,10 @@
     home.packages = with pkgs; [
       mako
       waybar
+      amixer
       
       #   imagemagick
-      #   hyprpicker
+      hyprpicker
       wayshot
       #   swappy
 
