@@ -26,7 +26,7 @@ lib.mkIf config.optional.hypr.enable {
           text_align = "center";      # center/right 或者不写默认为 left
           color = "rgba(200, 200, 200, 1.0)";
           inherit font_family;
-          font_size = 40;
+          font_size = 60;
           rotate = 0;                # 逆时针度数
 
           position = "0, 80";
